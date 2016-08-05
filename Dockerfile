@@ -12,4 +12,6 @@ WORKDIR /home/webportal-installer
 
 VOLUME  /usr/local/tomcat/conf
 
+COPY usr-local-tomcat-conf/tomcat-users.xml /usr/local/tomcat/conf
+
 #RUN make clean && make 
