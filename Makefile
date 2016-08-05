@@ -73,7 +73,8 @@ clean:
 realclean: clean
 	rm -rf solr-* unpacked-war
 
-build: $(SOLR_DIST) unpacked-war build.make specify_exports specify_exports/*.zip
+build: $(SOLR_DIST) unpacked-war build.make specify_exports
+#specify_exports/*.zip
 	mkdir -p build
 	$(MAKE) -f $(TOPDIR)/build.make -C build
 	touch $@
